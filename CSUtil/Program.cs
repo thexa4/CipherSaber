@@ -18,6 +18,8 @@ namespace CSUtil
             switch (settings.KeyMethod)
             {
                 case KeyMethod.Predefined:
+                    if (!settings.Quiet)
+                        Console.Error.WriteLine("Warning: Specifying the password as argument is considered unsafe. Use a keyfile instead.");
                     key = settings.Key;
                     break;
                 case KeyMethod.KeyFile:
@@ -45,7 +47,7 @@ namespace CSUtil
                         }
                     }
                     while (k.Key != ConsoleKey.Enter);
-
+                    key = key.Substring(0, key.Length - 1);
                     Console.Error.WriteLine();
                     break;
             }
@@ -56,7 +58,6 @@ namespace CSUtil
             Stream input = null;
             Stream saber = null;
             Stream output = null;
-            Stream hex = null;
 
             if (settings.InFile == null || settings.InFile == "-")
             {
