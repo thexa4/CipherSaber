@@ -6,7 +6,7 @@ using System.IO;
 
 namespace CipherSaber
 {
-    class SaberDecrypt : Stream
+    public class SaberDecrypt : Stream
     {
         public override bool CanRead { get { return true; }}
         public override bool CanWrite { get { return false; }}

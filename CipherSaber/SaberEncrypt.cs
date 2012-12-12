@@ -7,7 +7,7 @@ using System.Security.Cryptography;
 
 namespace CipherSaber
 {
-    class SaberEncrypt : Stream
+    public class SaberEncrypt : Stream
     {
         public override bool CanRead { get { return true; } }
         public override bool CanWrite { get { return false; } }
@@ -44,6 +44,7 @@ namespace CipherSaber
                 int len = (int)Math.Min(iv.Length - position, count);
                 for (int i = 0; i < len; i++)
                     buffer[offset + i] = iv[position + i];
+                position += len;
                 return len;
             }
             else
@@ -56,6 +57,8 @@ namespace CipherSaber
 
                 for (int i = 0; i < len; i++)
                     buffer[offset + i] = (byte)(cipherText[i] ^ keyChars[i]);
+
+                position += len;
 
                 return len;
             }
