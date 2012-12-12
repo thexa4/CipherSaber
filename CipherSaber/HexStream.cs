@@ -10,7 +10,7 @@ namespace CipherSaber
     {
         public override long Position
         {
-            get { return Position; }
+            get { return position; }
             set { throw new NotImplementedException(); }
         }
 
@@ -68,7 +68,7 @@ namespace CipherSaber
             if (i % 2 != 0)
                 prefetched = filtered[--i];
 
-            string ascii = Encoding.ASCII.GetString(filtered);
+            string ascii = Encoding.ASCII.GetString(filtered, 0, i);
             for (int j = 0; j < ascii.Length / 2; j++)
                 buffer[offset + j] = Byte.Parse(ascii.Substring(j * 2, 2), System.Globalization.NumberStyles.HexNumber);
 

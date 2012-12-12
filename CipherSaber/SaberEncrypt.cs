@@ -34,7 +34,7 @@ namespace CipherSaber
         protected void Initialize(string key, int n)
         {
             RandomNumberGenerator.Create().GetBytes(iv);
-            generator = new Arcfour(Encoding.Default.GetBytes(key).Concat(iv).ToArray(), n);
+            generator = new Arcfour(Encoding.ASCII.GetBytes(key).Concat(iv).ToArray(), n);
         }
 
         public override int Read(byte[] buffer, int offset, int count)

@@ -87,10 +87,6 @@ namespace CSUtil
                 saber = new SaberDecrypt(input, key, settings.KeyIterations);
             }
 
-            if (settings.Action == Action.Encrypt && settings.Hexadecimal)
-                saber = new HexStream(saber);
-
-
             if (settings.OutFile == null || settings.OutFile == "-")
             {
                 output = Console.OpenStandardOutput();
@@ -101,7 +97,11 @@ namespace CSUtil
                 output = f.OpenWrite();
             }
 
-            saber.CopyTo(output);
+            if (settings.Action == Action.Encrypt && settings.Hexadecimal)
+                output = new HexStream(output);
+
+            while(input.CanRead && input.Position != input.Length)
+                saber.CopyTo(output);
         }
     }
 }
