@@ -4,11 +4,6 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CipherSaber", "CipherSaber\CipherSaber.csproj", "{79F023C7-5DD4-4C19-9B5E-E9CC8E98E5D2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{99520599-7BAD-4FE3-81B5-5EDF0C77B4B1}"
-	ProjectSection(SolutionItems) = preProject
-		CipherSaber.vsmdi = CipherSaber.vsmdi
-		Local.testsettings = Local.testsettings
-		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSUtil", "CSUtil\CSUtil.csproj", "{EC1BC644-7AD3-4B1F-A188-457DD1EF07A2}"
 EndProject
