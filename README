@@ -1,0 +1,31 @@
+CSUtil  Copyright (C) 2012  Max Maton <max@maton.info>
+
+This application encrypts and decrypts files using the CipherSaber encryption algorithm.
+For more information about CipherSaber: http://ciphersaber.gurus.org/faq.html
+
+Command line options
+      --cs1                  Use CipherSaber-1 compliant settings (n=1)
+  -n, --iterations=VALUE     The amount of key iterations (default: 20)
+  -d, --decrypt              Decrypt the input file
+  -e, --encrypt              Encrypt the input file
+  -f, --file=VALUE           The location of the input file (default: stdin)
+  -o, --output=VALUE         The location of the output file (default: stdout)
+  -x, --hex                  Use hexadecimal notation for input/output
+  -i, --interactive          Ask for the keyphrase when needed
+  -p, --password=VALUE       Use a given password. Caution! This is unsafe, use
+                               --interactive or a keyfile.
+  -k, --keyfile=VALUE        Use a keyfile that contains the key.
+  -q, --quiet                Don't show warnings
+  -h, -?, --help             Display this help message
+
+Examples
+To encrypt a file using hex notation:
+CSUtil.exe -e -x
+
+To decrypt a file encoded using hex notation:
+CSUtil.exe -d -x
+
+Decrypt a file using cs1 encryption using a keyfile:
+CSUtil.exe -d --cs1 -f cknight.cs1 -o cknight.gif -k keyfile.txt
+
+This program comes with ABSOLUTELY NO WARRANTY; This is free software, and you are welcome to redistribute it under certain conditions;
