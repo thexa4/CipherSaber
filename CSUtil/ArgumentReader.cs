@@ -45,8 +45,18 @@ namespace CSUtil
                 Console.WriteLine("This application encrypts and decrypts files using the CipherSaber.");
                 Console.WriteLine("For more information about CipherSaber: http://ciphersaber.gurus.org/faq.html");
                 Console.WriteLine();
-                Console.WriteLine("Command line options:");
+                Console.WriteLine("Command line options");
                 s.WriteOptionDescriptions(Console.Out);
+                Console.WriteLine();
+                Console.WriteLine("Examples");
+                Console.WriteLine("To encrypt a file using hex notation:");
+                Console.WriteLine("CSUtil.exe -e -x");
+                Console.WriteLine();
+                Console.WriteLine("To decrypt a file encoded using hex notation:");
+                Console.WriteLine("CSUtil.exe -d -x");
+                Console.WriteLine();
+                Console.WriteLine("Decrypt a file using cs1 encryption using a keyfile:");
+                Console.WriteLine("CSUtil.exe -d --cs1 -f cknight.cs1 -o cknight.gif -k keyfile.txt");
                 System.Environment.Exit(0);
             }
 
