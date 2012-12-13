@@ -100,8 +100,7 @@ namespace CSUtil
             if (settings.Action == Action.Encrypt && settings.Hexadecimal)
                 output = new HexStream(output);
 
-            while(input.CanRead && input.Position != input.Length)
-                saber.CopyTo(output);
+            saber.CopyTo(output);
         }
     }
 }
