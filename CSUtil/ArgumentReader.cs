@@ -1,4 +1,21 @@
-﻿using System;
+﻿/*  CipherSaber
+    Copyright (C) 2012  Max Maton
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -39,10 +56,9 @@ namespace CSUtil
 
             if (settings.Help)
             {
-                Console.WriteLine("CSUtil 1.0");
-                Console.WriteLine("Created By Max Maton");
+                Console.WriteLine("CSUtil  Copyright (C) 2012  Max Maton <max@maton.info>");
                 Console.WriteLine();
-                Console.WriteLine("This application encrypts and decrypts files using the CipherSaber.");
+                Console.WriteLine("This application encrypts and decrypts files using the CipherSaber encryption algorithm.");
                 Console.WriteLine("For more information about CipherSaber: http://ciphersaber.gurus.org/faq.html");
                 Console.WriteLine();
                 Console.WriteLine("Command line options");
@@ -57,6 +73,8 @@ namespace CSUtil
                 Console.WriteLine();
                 Console.WriteLine("Decrypt a file using cs1 encryption using a keyfile:");
                 Console.WriteLine("CSUtil.exe -d --cs1 -f cknight.cs1 -o cknight.gif -k keyfile.txt");
+                Console.WriteLine();
+                Console.WriteLine("This program comes with ABSOLUTELY NO WARRANTY; This is free software, and you are welcome to redistribute it under certain conditions;");
                 System.Environment.Exit(0);
             }
 
